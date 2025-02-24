@@ -1,4 +1,6 @@
-
+body{
+    background-color: orange;
+}
 .nav {
     list-style-type: none;
     margin: 0;

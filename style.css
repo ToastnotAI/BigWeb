@@ -1,15 +1,36 @@
-body{
+/* Apply box-sizing globally */
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     background-color: orange;
 }
-.nav {
+
+/* Navbar styles */
+.navBar {
+    width: 100%;
+    background-color: #333;
+    border-bottom: 1px solid #e7e7e7;
+    position: fixed; /* Make navbar fixed at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays on top of other content */
+    width: 100%;
+}
+
+.navBar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    border: 1px solid #e7e7e7;
 }
-.nav li {
+
+.navBar li {
     display: inline;
     color: white;
     text-decoration: none;
@@ -17,9 +38,9 @@ body{
     background-color: #333;
     float: left;
     border-right: 1px solid #bbb;
-    }
+}
 
-.nav li a {
+.navBar li a {
     display: block;
     color: blue;
     text-align: center;
@@ -27,16 +48,45 @@ body{
     text-decoration: none;
 }
 
-.nav li a:hover{
+.navBar li a:hover {
     background-color: grey;
 }
 
-image {
-    align-content: center;
-    border-radius: 50%;
+/* Flex container for the entire page */
+.container {
+    display: flex;  /* Use flexbox to lay out children horizontally */
+    flex-direction: row;  /* Align items side by side */
+    height: calc(100vh - 50px);  /* Full height minus navbar height */
+    margin-top: 50px; /* Offset for the navbar height */
 }
-#fin{
-    font-size: 30px;
-    color: green;
 
+/* Left sidebar */
+.left {
+    width: 15%; /* Sidebar takes 15% of the width */
+    background-color: #f1f1f1;
+    border-right: 1px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%; /* Fill the height of the container */
+}
+
+/* Content area */
+.content {
+    flex-grow: 1; /* Content should take remaining space */
+    padding: 20px;
+    height: 100%; /* Fill the full height of the container */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center; /* Center content horizontally */
+    box-sizing: border-box;
+    overflow-y: auto; /* Enable scrolling if the content overflows */
+}
+
+p {
+    font-size: 30px;
+}
+
+img {
+    border-radius: 50%;
 }

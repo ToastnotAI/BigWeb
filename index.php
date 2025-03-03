@@ -1,13 +1,25 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Index</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
 <?php include 'navbar.php'; ?>
 
-<body>
-	<image src = "CoolDog.webp" height = 200px width = 250px></image>
-	<p id="fin"> fin was here</p>
+<div class="container">
+    <div class="left">
+        <p>Here's some left-sided content</p>
+    </div>
+    <div class="content">
+        <h1>COOL WEBSITE</h1>
+        <p>Here is a cool looking dog</p>
+        <img src="CoolDog.webp" height="200px" width="250px" alt="Cool Dog">
+    </div>
+</div>
+
 </body>
 </html>

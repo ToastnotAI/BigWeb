@@ -4,13 +4,18 @@
 }
 
 body, html {
-    margin-top:50px;
+    margin: 0;
     padding: 0;
     height: 100%;
     background-color: orange;
 }
 
+body {
+    margin-top: 50px;
+}
+
 /* Navbar styles */
+/* Navbar container */
 .navBar {
     width: 100%;
     background-color: #333;
@@ -21,23 +26,26 @@ body, html {
     height: 50px;  /* Navbar height */
 }
 
+/* Styling for the navbar items (horizontal list) */
 .navBar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: visible;
     background-color: #333;
     display: flex;  /* Horizontally align the navbar items */
 }
 
+/* Styling for each navbar item */
 .navBar li {
-    display: inline-block;
+    position: relative; /* Position relative to contain dropdown */
     color: white;
     text-decoration: none;
     background-color: #333;
     border-right: 1px solid #bbb;
 }
 
+/* Navbar links */
 .navBar li a {
     display: block;
     color: blue;
@@ -46,9 +54,49 @@ body, html {
     text-decoration: none;
 }
 
+/* Hover effect for navbar links */
 .navBar li a:hover {
     background-color: grey;
 }
+
+/* Dropdown container */
+.navBar .dropdown {
+    position: relative; /* Ensure the dropdown content is positioned below this item */
+}
+
+/* Dropdown content - hidden by default */
+.navBar .dropdown-content {
+    display: none; /* Initially hide the dropdown content */
+    position: absolute; /* Position the dropdown below the parent item */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1001; /* Ensure the dropdown is above other content */
+    left: 0; /* Align dropdown with left edge of the parent */
+    top: 100%; /* Position the dropdown below the parent list item */
+    border-radius: 30%;
+}
+
+/* Show dropdown content on hover */
+.navBar .dropdown:hover .dropdown-content {
+    display: block; /* Display the dropdown content when hovering over the parent */
+}
+
+/* Dropdown links */
+.navBar .dropdown-content li a {
+    color: blue;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block; /* Make the links block-level for better hover behavior */
+}
+
+/* Hover effect for dropdown links */
+.navBar .dropdown-content li a:hover {
+    background-color: #ddd;
+}
+
+
+
 
 /* Main container holding sidebar and content */
 .container {
@@ -89,10 +137,9 @@ img {
     border-radius: 50%;
 }
 
-/*This is layout 1*/
-
-.layout1-top{
-    display:flex;
+/* Layout 1 */
+.layout1-top {
+    display: flex;
     flex-direction: row;
     justify-content: left;
     width: 100%;
@@ -100,7 +147,8 @@ img {
     padding: 20px;
     margin: 10px;
 }
-.layout1-1{
+
+.layout1-1 {
     justify-content: center;
     width: 100px;
     background-color: #f1f1f1;
@@ -108,14 +156,15 @@ img {
     margin: 10px;
 }
 
-.layout1-2{
+.layout1-2 {
     justify-content: center;
     flex-grow: 1;
     background-color: #FF11f1;
     padding: 20px;
     margin: 10px;
 }
-.layout1-3{
+
+.layout1-3 {
     justify-content: center;
     height: 45%;
     background-color: #01fFFF;
@@ -123,7 +172,7 @@ img {
     margin: 10px;
 }
 
-/*This is layout 2*/
+/* Layout 2 */
 .layout2 {
     display: flex;
     flex-direction: row;
@@ -166,4 +215,44 @@ img {
 
 .layout2-3 {
     background-color: #01fFFF;
+}
+
+/* Cookies section */
+.cookies {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+    padding: 20px;
+    margin: 10px;
+}
+
+.cookies li {
+    list-style-type: none;
+}
+
+.cookies p {
+    justify-content: center;
+    display: inline-block;
+    text-decoration: none;
+    border-right: 1px solid #bbb;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cookies h3 {
+    display: inline-block;
+    text-decoration: none;
+    border-right: 1px solid #bbb;
+    font-size: 40px;
+    font-family: 'Comic Sans MS';
+    justify-content: left;
+}
+
+.cookies img {
+    width: auto;
+    height: 200px;
+    border-radius: 10%;
+    padding: 20px;
+    margin: 10px;
 }

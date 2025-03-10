@@ -14,12 +14,11 @@ body, html {
 .navBar {
     width: 100%;
     background-color: #333;
-    border-bottom: 1px solid #e7e7e7;
-    position: fixed; /* Make navbar fixed at the top */
+    position: fixed;  /* Fix the navbar at the top */
     top: 0;
     left: 0;
-    z-index: 1000; /* Ensure it stays on top of other content */
-    width: 100%;
+    z-index: 1000;  /* Ensure navbar stays on top */
+    height: 50px;  /* Navbar height */
 }
 
 .navBar ul {
@@ -28,15 +27,14 @@ body, html {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    display: flex;  /* Horizontally align the navbar items */
 }
 
 .navBar li {
-    display: inline;
+    display: inline-block;
     color: white;
     text-decoration: none;
-    padding: 0px;
     background-color: #333;
-    float: left;
     border-right: 1px solid #bbb;
 }
 
@@ -52,35 +50,35 @@ body, html {
     background-color: grey;
 }
 
-/* Flex container for the entire page */
+/* Main container holding sidebar and content */
 .container {
-    display: flex;  /* Use flexbox to lay out children horizontally */
-    flex-direction: row;  /* Align items side by side */
-    height: calc(100vh - 50px);  /* Full height minus navbar height */
-    margin-top: 50px; /* Offset for the navbar height */
+    display: flex;
+    flex-direction: row;  /* Align left and content side by side */
+    height: calc(100vh - 50px);  /* Subtract navbar height from the total height */
+    width: 100%;
+    margin-top: 50px; /* Offset the content below the fixed navbar */
 }
 
 /* Left sidebar */
 .left {
-    width: 15%; /* Sidebar takes 15% of the width */
+    width: 15%; /* Sidebar takes up 15% of the width */
     background-color: #f1f1f1;
-    border-right: 1px solid black;
     padding: 20px;
+    height: 100%; /* Fill the full height */
     box-sizing: border-box;
-    height: 100%; /* Fill the height of the container */
 }
 
 /* Content area */
 .content {
-    flex-grow: 1; /* Content should take remaining space */
+    flex-grow: 1; /* Content grows to take the remaining space */
     padding: 20px;
-    height: 100%; /* Fill the full height of the container */
+    height: 100%; /* Fill the full height */
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Align content to the top */
     align-items: center; /* Center content horizontally */
+    overflow-y: auto; /* Enable scrolling if content overflows */
     box-sizing: border-box;
-    overflow-y: auto; /* Enable scrolling if the content overflows */
 }
 
 p {
@@ -89,4 +87,83 @@ p {
 
 img {
     border-radius: 50%;
+}
+
+/*This is layout 1*/
+
+.layout1-top{
+    display:flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 100%;
+    height: 50%;
+    padding: 20px;
+    margin: 10px;
+}
+.layout1-1{
+    justify-content: center;
+    width: 100px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin: 10px;
+}
+
+.layout1-2{
+    justify-content: center;
+    flex-grow: 1;
+    background-color: #FF11f1;
+    padding: 20px;
+    margin: 10px;
+}
+.layout1-3{
+    justify-content: center;
+    height: 45%;
+    background-color: #01fFFF;
+    padding: 20px;
+    margin: 10px;
+}
+
+/*This is layout 2*/
+.layout2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex: 1;
+    height: 100%;
+    padding: 20px;
+    margin: 10px;
+}
+
+.layout2-1 {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 95%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin: 10px;
+}
+
+.layout2-right {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between;
+    flex-grow: 1;
+    height: 100%;
+    padding: 20px;
+    margin: 10px;
+}
+
+.layout2-2, .layout2-3 {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    height: 45%;
+    background-color: #FF11f1;
+    padding: 20px;
+    margin: 10px;
+}
+
+.layout2-3 {
+    background-color: #01fFFF;
 }

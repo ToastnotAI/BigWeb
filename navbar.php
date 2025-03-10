@@ -9,5 +9,6 @@
                 </ul>
             </li>
             <li><a href='aboutCookies.php'>About Cookies</a></li>
+            <li><a href='tebl.php'>Table</a></li>
         </ul>
     </div>

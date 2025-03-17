@@ -16,7 +16,7 @@
     </div>
     <div class="content">
         <h1>COOL WEBSITE</h1>
-        <p>Here is a cool looking dog</p>
+        <p>Here is a <b>cool</b> looking dog</p>
         <img src="CoolDog.webp" height="200px" width="250px" alt="Cool Dog">
     </div>
 </div>

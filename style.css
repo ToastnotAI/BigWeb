@@ -12,6 +12,7 @@ body, html {
 
 body {
     margin-top: 50px;
+    
 }
 
 /* Navbar styles */
@@ -131,6 +132,10 @@ body {
 
 p {
     font-size: 30px;
+    font-family: "UnifrakturMaguntia", cursive;
+    font-weight: 400;
+    font-style: normal;
+  
 }
 
 img {
@@ -286,4 +291,10 @@ td{
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+h1{
+    font-family: "Moo Lah Lah", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }

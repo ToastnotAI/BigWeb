@@ -44,5 +44,19 @@
                 </tr>
             </table>
         </div>
+        <h3 class = "add">Add your own data</h3>
+        <div class="add">
+            <table class="form" id = "form" action="add-data.php" method="POST">
+                <tr>
+                    <td><input type="text" name="name" placeholder="Name"></td>
+                    <td><input type="text" name="pokemon" placeholder="Fav pokemon"></td>
+                    <td><input type="text" name="film" placeholder="Fav film"></td>
+                    <td><input type="text" name="height" placeholder="Height in cm"></td>
+                    <td><input type="text" name="burger" placeholder="Fav burger"></td>
+                    <td><button type="submit">Add</button></td>
+                </tr>
+            </table>
+
+        </div>
     </body>
 </html>

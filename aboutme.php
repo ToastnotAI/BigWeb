@@ -33,7 +33,7 @@
             }
 
             // Call the function every 1000 milliseconds
-            setInterval(randomColor, 1000);
+            setInterval(randomColor, 350);
         </script>
     </body>
 </html>

@@ -10,7 +10,7 @@
 
 <?php include 'navbar.php'; ?>
 
-<div class="container">
+<div class="container1">
     <div class="left">
         <p>Here's some left-sided content</p>
     </div>
